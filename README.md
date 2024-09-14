@@ -56,12 +56,12 @@ Figure 6
 
 The Date column was then converted into a datetime format and set as the inxed of the DataFrame. This step is important for ensuring that the time series data is ordered correctly. Following this data preparation, the Simple Exponential Smoothing (SES) model was applied to the Value column. This was done by passing the Value series to the SimpleExpSmoothing function from the statsmodels library and subsequently calling the fit() method to train the model, as shown in Diagram 7.
 
-![Diagram 7](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/4%20python.png)
+![Figure 7](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/4%20python.png)
 
 
-Diagram 7
+Figure 7
 
-# Results of Simple Exponential Smoothing Model
+## Results of Simple Exponential Smoothing Model
 The summary of the fitted SES model, as presented in Diagram 8, provide key metrics for evaluating its performance. The smoothing level (alpha) was estimated at 0.22, indicating that the model handles a balance between recent observations and the overall historical pattern, avoiding overreaction to short term fluctuations in the data. This moderate responsiveness allows the model to smooth the series effectively.
 
 The Sum of Squared Errors (SSE) was 21804.385, reflecting the total squared difference between the observed values and the fitted values. This metric suggest how well the model captures the data, with a lower SSE highlighting a closer fit.
@@ -69,7 +69,14 @@ The Sum of Squared Errors (SSE) was 21804.385, reflecting the total squared diff
 Furthermore, the model selection criteria, Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) were reported as 942.31 and 948.90, respectively. This metric serves to evaluate the model quality by considering both the goodness of fit and model complexity, with a lower values implying a more efficient model.
 
 
-![Diagram 8](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/5%20python.png)
+![Figure 8](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/5%20python.png)
 
 
-Diagram 8
+Figure 8
+
+# Fitted Values
+The fitted values were plotted against the original data to visually assess the model's performance. In this plot, the original data appears as a blue line, while the fitted values are represented by a red line. The model provides a smoothed line that follows the general level of the time series, capturing the overall pattern without reacting to minor variations, as shown in Figure 9.
+
+![Figure 9](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/9%20Python.png)
+
+Figure 9
