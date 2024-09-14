@@ -1,4 +1,4 @@
-# Comparative Analysis Of Exponential Smoothing Methods For Time Series Forecasting
+# Comparative Analysis Of Exponential Smoothing Methods For Time Series Forecasting By Jolly Madamedon
 
 # Introduction
 The primary purpose of this report is to analyse and compare different exponential smoothing methods for time series forecasting, using a dataset with a clear linear trend and random fluctuations. By applying these techniques to a simulated dataset, the report aims to evaluate their effectiveness in capturing the trend and managing noise. The analysis will highlight the strengths and limitations of each method, particularly in scenarios where seasonality is absent, and will provide guidance on selecting the most suitable forecasting approach for similar data patterns. 
@@ -8,10 +8,36 @@ The primary purpose of this report is to analyse and compare different exponenti
 ## Construction of the Dataset
 To facilitate this analysis, a simulated dataset was generated, covering a period from January 1, 2022 to July 19, 2022, totaling 200 days. The dataset features a daily frequency idnex created using pandas. The primary variable of interest, the 'Value' column, was design to illustrate a general upward trend using np.linspace. To add realism and mimic the fluctuation seen in real-world data, random noise was incorporated into this trend using np.random.normal (as shown in Figure 1). This approach allows for a controlled setting to test and compare the performance of different smoothing methods. 
 
-![Figure 1]()
+![Figure 1](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/1%20python.png)
+
+Figure 1
+
 
 In addition to the 'Value' column, the dataset includes two two extra features, Feature 1 and Feature 2. Feature 1 consists of random integers, while Feature 2 contains random uniform values, provide a more comprehensive picture of the dataset structure (see Figure 2). These feature were used in the forecasting models in this report. The dataset preview shown in Figure 2 also displays the first five rows using the df.head() code. 
 
-![Figure 2]()
+![Figure 2](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/2%20python.png)
 
-The purpose of constructing this dataset was to create a simple yet realistic scenario for applying and comparing different exponential smoothing methods. By controlling the trend and noise components, this setup enables a clear and straightforward evaluation of each method's performance.
+Figure 2
+
+
+# Exploratory Data Analysis 
+Before applying smoothing methods, it's crucial to understand the dataset's characteristics. This section provides a visual and statistical exploration of the data to reveal key patterns and trends.
+
+## Visualing the Time Series
+A time series plot of the 'Value' column was created to examine the overall trend and fluctuations (see Figure 3). The plot illustrated a clear linear upward trend through the period, accompannied by random flucationations due tot he introduced noise. This consistent upward trajectory indicates the presence of a trend component, making the data suitable for trend-capture methods like Holt's Linear Trend Model.
+
+![Figure 3]()
+
+Figure 3
+
+## Summary Statistics
+The summary statistics of the 'Value' column offer more insights into the data distribution (shown in Figure 4). With a mean of approximately 99.47 and a standard deviation of around 30.19, indicating some variability. The range of values, from a minimum of about 34.90 to a maximum of 158.03, further highlights the presence of fluctuations. These statistics confirm the dataset's inherent variability, indicating that the smoothing methods will need to manage this noise while accurately modeling the trend.
+
+![Figure 4]()
+
+Figure 4
+
+## Moving Average
+To smooth out short-term fluctuations and better visualise the underlying trend, a 10-day moving average (MA) was plotted alongside the original data (Figure 5). The MA (red line) provides a clearer view of the linear trend by reducing the impact of random moise. The visualisaiton supports the intial observation of an upward trend and indicates a lack of regular seasonality. Therefore, methods designed to capture trend rather than seasonal patterns will be more appropriate for this dataset.
+
+![Figure 5]()
