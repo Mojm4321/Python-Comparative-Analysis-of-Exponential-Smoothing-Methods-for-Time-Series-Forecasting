@@ -43,3 +43,20 @@ To smooth out short-term fluctuations and better visualise the underlying trend,
 ![Figure 5](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/8%20python.png)
 
 Figure 5
+
+# Exponential Smoothing Methods
+
+## Simple Exponential Smoothing (SES)
+The dataset was subsequently loaded into a DataFrame name df, consisting of 200 rows with columns including Date, Value, Feature1, and Feature 2. The primary focus was on  Date and Value columns, with Date serving as the the time index and Value was the target variable for modeling. Examining the structure of the DataFrame, as shown in Figure 6, confirmed the presence of key columns and ensured tha the data was corrected formatted for the analysis. 
+
+![Figure 6](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/3%20python.png)
+
+
+Figure 6
+
+The Date column was then converted into a datetime format and set as the inxed of the DataFrame. This step is important for ensuring that the time series data is ordered correctly. Following this data preparation, the Simple Exponential Smoothing(SES) model was applied to the Value column. This was done by passing the Value series to the SimpleExpSmoothing function from the statsmodels library and subsequently calling the fit() method to train the model, as shown in Diagram 7.
+
+![Diagram 7](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/4%20python.png)
+
+
+Diagram 7
