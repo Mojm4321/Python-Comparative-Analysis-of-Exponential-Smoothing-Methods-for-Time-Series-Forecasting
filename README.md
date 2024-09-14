@@ -26,18 +26,20 @@ Before applying smoothing methods, it's crucial to understand the dataset's char
 ## Visualing the Time Series
 A time series plot of the 'Value' column was created to examine the overall trend and fluctuations (see Figure 3). The plot illustrated a clear linear upward trend through the period, accompannied by random flucationations due tot he introduced noise. This consistent upward trajectory indicates the presence of a trend component, making the data suitable for trend-capture methods like Holt's Linear Trend Model.
 
-![Figure 3]()
+![Figure 3](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/6%20python.png)
 
 Figure 3
 
 ## Summary Statistics
 The summary statistics of the 'Value' column offer more insights into the data distribution (shown in Figure 4). With a mean of approximately 99.47 and a standard deviation of around 30.19, indicating some variability. The range of values, from a minimum of about 34.90 to a maximum of 158.03, further highlights the presence of fluctuations. These statistics confirm the dataset's inherent variability, indicating that the smoothing methods will need to manage this noise while accurately modeling the trend.
 
-![Figure 4]()
+![Figure 4](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/7%20python.png)
 
 Figure 4
 
 ## Moving Average
 To smooth out short-term fluctuations and better visualise the underlying trend, a 10-day moving average (MA) was plotted alongside the original data (Figure 5). The MA (red line) provides a clearer view of the linear trend by reducing the impact of random moise. The visualisaiton supports the intial observation of an upward trend and indicates a lack of regular seasonality. Therefore, methods designed to capture trend rather than seasonal patterns will be more appropriate for this dataset.
 
-![Figure 5]()
+![Figure 5](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/8%20python.png)
+
+Figure 5
