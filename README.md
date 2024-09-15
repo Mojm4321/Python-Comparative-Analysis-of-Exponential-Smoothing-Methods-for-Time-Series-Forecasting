@@ -92,7 +92,7 @@ Figure 10
 # Holt's Linear Trend Model
 To enhance forecasting, Holt's Linear Trend model was applied tothe dataset to capture both the level and the trend of the time series. This model extends SES by using an additional component to model the trend over time, making it appropriate for datasets witha clear upward or downward movement. The fitting process and resulting forecast are illustrated in Figure 11.
 
-![Figure 11]()
+![Figure 11](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/11%20python.png)
 
 
 Figure 11
@@ -103,7 +103,7 @@ The Holt model was fitted to the Value column to account for the dataset's linea
 ## Results and Forecast Analysis
 As shown in the plot, the fitted values(orange line) closely follow the original data (blue line), shows that this model successfully captures the upward trend present in the dataset. This demonstrates the model's ability to accommodate data with a linear trend, which SES failed to account for, as seen in earlier analysis.
 
-The 90-day forecast (green line) extends the trend into the future, illustrates a clear upward trajectory that aligns with the trend observed in the historical data. Unlike SES, which produced a flat forecast, Holt's model projects an increasing trend suggesting it's utility in datasets with consistent directional movement.
+The 90-day forecast (green line) extends the trend into the future, illustrating a clear upward trajectory that aligns with the trend observed in the historical data. Unlike SES, which produced a flat forecast, Holt's model projects an increasing trend suggesting it's utility in datasets with consistent directional movement.
 
 # Conclusion
-The application of Holt's Linear Trend model demonstrated an enhanced capability to capture and project the linear trend in the data, as shown in Figure 11. This model's forecasts are more aligned with the observed upward trajectory, providing a much better fit than SES for this particular dataset. Further, Holt can be relied on when data shows a persistent increase or decrease.
+The application of Holt's Linear Trend model demonstrated an enhanced capability to capture and project the linear trend in the data, as shown in Figure 11. This model's forecasts are more aligned with the observed upward trajectory, providing a much better fit than SES for this particular dataset. Further, Holt's model can be relied upon when data shows a persistent increase or decrease, making it more suitable for trend oriented time series data.
