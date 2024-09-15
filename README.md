@@ -46,7 +46,7 @@ Figure 5
 
 # Exponential Smoothing Methods
 
-## Simple Exponential Smoothing (SES)
+# Simple Exponential Smoothing 
 The dataset was subsequently loaded into a DataFrame name df, consisting of 200 rows with columns including Date, Value, Feature1, and Feature 2. The primary focus was on  Date and Value columns, with Date serving as the the time index and Value was the target variable for modeling. Examining the structure of the DataFrame, as shown in Figure 6, confirmed the presence of key columns and ensured tha the data was corrected formatted for the analysis. 
 
 ![Figure 6](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/3%20python.png)
@@ -61,7 +61,7 @@ The Date column was then converted into a datetime format and set as the inxed o
 
 Figure 7
 
-## Results of Simple Exponential Smoothing Model
+## Results from the Model
 The summary of the fitted SES model, as presented in Diagram 8, provide key metrics for evaluating its performance. The smoothing level (alpha) was estimated at 0.22, indicating that the model handles a balance between recent observations and the overall historical pattern, avoiding overreaction to short term fluctuations in the data. This moderate responsiveness allows the model to smooth the series effectively.
 
 The Sum of Squared Errors (SSE) was 21804.385, reflecting the total squared difference between the observed values and the fitted values. This metric suggest how well the model captures the data, with a lower SSE highlighting a closer fit.
@@ -74,9 +74,17 @@ Furthermore, the model selection criteria, Akaike Information Criterion (AIC) an
 
 Figure 8
 
-# Fitted Values
+## Fitted Values
 The fitted values were plotted against the original data to visually assess the model's performance. In this plot, the original data appears as a blue line, while the fitted values are represented by a red line. The model provides a smoothed line that follows the general level of the time series, capturing the overall pattern without reacting to minor variations, as shown in Figure 9.
 
 ![Figure 9](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/9%20Python.png)
 
 Figure 9
+
+## Forecast with Simple Exponential Smoothing
+The model was used to forecast the next 90 days. These forecasted values were plotted alongside the original data and fitted values for comparison. As expected with SES, the forecast,  depicted as a green line extends as a flat line from the last fitted value. This indicates that SES assumes no trend in the data, projecting the future values at a constant level based on the most recent data points. While this characterstic makes SES a useful baseline model, it also illustrates that it may not be suitable for data with trends or seasonality, as illustrated in Figure 10.
+
+![Figure 10](https://github.com/Mojm4321/Python-Comparative-Analysis-of-Exponential-Smoothing-Methods-for-Time-Series-Forecasting/blob/main/10%20python.png)
+
+
+Figure 10
