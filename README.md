@@ -1,4 +1,4 @@
-# Comparative Analysis Of Exponential Smoothing Methods For Time Series Forecasting By Jolly Madamedon
+# Comparative Analysis Of Exponential Smoothing Methods For Time Series Forecasting By J M
 
 # Introduction
 The primary purpose of this report is to analyse and compare different exponential smoothing methods for time series forecasting, using a dataset with a clear linear trend and random fluctuations. By applying these techniques to a simulated dataset, the report aims to evaluate their effectiveness in capturing the trend and managing noise. The analysis will highlight the strengths and limitations of each method, particularly in scenarios where seasonality is absent, and will provide guidance on selecting the most suitable forecasting approach for similar data patterns. 
